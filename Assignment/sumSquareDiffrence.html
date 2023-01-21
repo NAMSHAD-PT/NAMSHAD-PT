@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum square diffrence</title>
+</head>
+<body>
+        <script>
+            let sumOfSquares = 0;
+            let squareOfSum = 0;
+            for(var i = 1;i<=100;i++){
+                sumOfSquares +=i*i;
+                squareOfSum += i;
+            }
+            squareOfSum = squareOfSum * squareOfSum;
+            const difference = squareOfSum - sumOfSquares ;
+            alert(difference)
+
+            console.log(difference)
+
+        </script>
+</body>
+</html>

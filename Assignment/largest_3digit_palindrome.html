@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest 3 digit palindrome</title>
+</head>
+<body>
+    <script>
+        function largestPalindrome(){
+            var largest = 0;
+            for(var i = 100; i<1000; i++){
+                for( j=1; j<1000; j++){
+                    var product = i * j;
+                    if(isPalindrome(product.toString()) && product > largest){
+                        largest = product;
+                    }
+                }
+            }
+            alert(largest);
+            return largest;
+
+        }
+
+        function isPalindrome(str){
+            return str == str.split('').reverse().join('');
+        }
+        console.log(largestPalindrome())
+        // The largest palindrome made from the product of two 3 digit numbers 906609 = 993*913
+    </script>
+</body>
+</html>
